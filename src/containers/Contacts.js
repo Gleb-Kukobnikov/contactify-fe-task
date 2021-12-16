@@ -36,7 +36,7 @@ export const Contacts = () => {
   };
 
   const [sortEnabled, setSort] = useBoolean(true);
-  const [activeFilter, setActive] = useBoolean(true);
+  const [activeFilter, setActive] = useBoolean(false);
   const [loading, setLoading] = useState(false);
   const [contacts, setContacts] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
@@ -70,7 +70,7 @@ export const Contacts = () => {
         <Flex flex={1} bg="mainBlue.500" w="70%" borderTopRadius="lg" p={4} gap={4}>
           <Input w="150px" placeholder="Name" onChange={handleNameFilter} />
           <Select w="150px" placeholder="City" />
-          <Checkbox colorScheme="mainGreen" defaultIsChecked onChange={setActive.toggle}>
+          <Checkbox colorScheme="mainGreen" onChange={setActive.toggle}>
             Show active <FontAwesomeIcon icon={faEye} />
           </Checkbox>
           <Button bg="mainGreen.900" h="40px" w="100px" borderRadius="25px">
