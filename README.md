@@ -8,6 +8,7 @@
 - Hide/Show Column functionality
 
 Project written using React and Chakra.
+First fetch could be long, please, take patience.
 
 For development mode run:
 ### `yarn start`
